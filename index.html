@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>City Public School</title>
+  <style>
+    /* GENERAL STYLES */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Arial', sans-serif; line-height: 1.6; background: #f0f4f8; color: #333; }
+    a { text-decoration: none; color: inherit; }
+
+    /* HEADER */
+    header {
+      background: linear-gradient(to right, #2980b9, #6dd5fa);
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    header h1 { font-size: 36px; }
+    header p { font-size: 18px; }
+
+    /* NAVIGATION */
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #34495e;
+    }
+    nav a {
+      padding: 15px 25px;
+      color: white;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    nav a:hover { background: #2c3e50; }
+
+    /* HERO SECTION */
+    .hero {
+      background: url('https://images.unsplash.com/photo-1581090700227-58c9a53fa6c5?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+    }
+    .hero h2 { font-size: 48px; }
+
+    /* ABOUT SECTION */
+    .about {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+    .about h2 { color: #2980b9; margin-bottom: 20px; }
+    .about p { font-size: 18px; }
+
+    /* ADMISSION FORM */
+    .admission {
+      max-width: 700px;
+      margin: 50px auto;
+      padding: 30px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+    .admission h2 { text-align: center; color: #2980b9; margin-bottom: 10px; }
+    .admission p.demo-note { text-align: center; color: #e74c3c; font-weight: bold; }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    label { margin-top: 15px; margin-bottom: 5px; font-weight: bold; }
+    input[type="text"], input[type="number"], input[type="email"], select, textarea {
+      padding: 10px; border-radius: 5px; border: 1px solid #ccc; font-size: 16px;
+    }
+    textarea { resize: vertical; }
+    input[type="submit"], input[type="reset"] {
+      margin-top: 20px; padding: 12px; font-size: 16px;
+      border: none; border-radius: 5px; cursor: pointer; transition: 0.3s;
+    }
+    input[type="submit"] { background-color: #2980b9; color: white; }
+    input[type="submit"]:hover { background-color: #3498db; }
+    input[type="reset"] { background-color: #e74c3c; color: white; margin-left: 10px; }
+    input[type="reset"]:hover { background-color: #c0392b; }
+    .form-row { display: flex; gap: 10px; flex-wrap: wrap; }
+    .form-row > div { flex: 1; min-width: 150px; }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      background: #34495e;
+      color: white;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>City Public School</h1>
+    <p>Excellence in Education for Classes 1 to 8</p>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#admission">Admission</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <h2>Welcome to City Public School</h2>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <h2>About Our School</h2>
+    <p>
+      City Public School is a modern, safe, and inclusive environment where children from Class 1 to Class 8
+      grow academically, socially, and morally. We provide excellent teachers, fun activities, and smart classrooms
+      to ensure every student succeeds. Our mission is to nurture young minds for a bright future.
+    </p>
+  </section>
+
+  <!-- ADMISSION FORM -->
+  <section class="admission" id="admission">
+    <h2>Admission Form (Demo)</h2>
+    <p class="demo-note">This is a <strong>demo form</strong>. No real admissions will happen.</p>
+    <form action="#" method="post">
+
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname" name="fullname" placeholder="Enter student name" required>
+
+      <div class="form-row">
+        <div>
+          <label for="age">Age:</label>
+          <input type="number" id="age" name="age" min="5" max="14" required>
+        </div>
+        <div>
+          <label for="gender">Gender:</label>
+          <select id="gender" name="gender" required>
+            <option value="">Select Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+      </div>
+
+      <label for="class">Class Applying For:</label>
+      <select id="class" name="class" required>
+        <option value="">Select Class</option>
+        <option value="1">Class 1</option>
+        <option value="2">Class 2</option>
+        <option value="3">Class 3</option>
+        <option value="4">Class 4</option>
+        <option value="5">Class 5</option>
+        <option value="6">Class 6</option>
+        <option value="7">Class 7</option>
+        <option value="8">Class 8</option>
+      </select>
+
+      <label for="address">Address:</label>
+      <textarea id="address" name="address" rows="3" placeholder="Enter full address" required></textarea>
+
+      <div class="form-row">
+        <div>
+          <label for="parentname">Parent/Guardian Name:</label>
+          <input type="text" id="parentname" name="parentname" placeholder="Parent name" required>
+        </div>
+        <div>
+          <label for="contact">Contact Number:</label>
+          <input type="text" id="contact" name="contact" placeholder="Phone number" required>
+        </div>
+      </div>
+
+      <label for="email">Email (optional):</label>
+      <input type="email" id="email" name="email" placeholder="Enter email">
+
+      <input type="submit" value="Submit Form">
+      <input type="reset" value="Reset Form">
+
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact">
+    <p>Contact us: info@citypublicschool.com | +92 300 1234567</p>
+    <p>&copy; 2026 City Public School</p>
+  </footer>
+
+</body>
+</html>
